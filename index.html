@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焕颜新中式美学 - 融合传统与现代的美容体验</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-red: #c03a2b;
+            --primary-gold: #d4af37;
+            --light-bg: #f8f4e9;
+            --dark-text: #333333;
+            --light-text: #666666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: var(--primary-red);
+            margin-left: 10px;
+            font-weight: normal;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-red);
+        }
+        
+        .cta-button {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #a83225;
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x600') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        /* 服务板块 */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .section-title p {
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+        
+        .service-content p {
+            color: var(--light-text);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .service-link {
+            color: var(--primary-red);
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .service-link::after {
+            content: "→";
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .service-link:hover::after {
+            transform: translateX(5px);
+        }
+        
+        /* 关于我们 */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--light-text);
+        }
+        
+        .about-image {
+            flex: 1;
+            height: 400px;
+            background-color: #eee;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* 预约区域 */
+        .booking {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #a83225 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .booking h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .booking p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .booking-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-red);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .booking-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 底部 */
+        footer {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--primary-gold);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 15px;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">焕</div>
+                    <h1>焕颜新中式美学</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#services">服务项目</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                        <li><a href="#booking" class="cta-button">立即预约</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>焕颜新中式美学</h2>
+            <p>融合传统中医智慧与现代美容科技，为您带来身心平衡的美丽体验</p>
+            <a href="#booking" class="cta-button" style="padding: 12px 30px;">探索服务</a>
+        </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的服务</h2>
+                <p>精选传统与现代相结合的美容养生项目，让您焕发自然光彩</p>
+            </div>
+            <div class="services-grid">
+                <!-- 头疗放松 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>头疗放松</h3>
+                        <p>运用传统中医经络理论，结合现代舒缓技术，缓解头部疲劳，促进血液循环，让您感受前所未有的放松体验。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 头疗焕活 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>头疗焕活</h3>
+                        <p>针对现代人常见的头皮问题，采用中草药配方与现代科技相结合，激活毛囊，改善头皮健康。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 面部清洁 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>面部清洁</h3>
+                        <p>深层清洁毛孔，去除黑头粉刺，结合中药草本成分，温和不刺激，还原肌肤洁净状态。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 面部抗衰老 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>面部抗衰老</h3>
+                        <p>运用传统中医驻颜秘方与现代抗衰技术，提升肌肤弹性，淡化细纹，延缓肌肤衰老过程。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 养生按摩 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>养生按摩</h3>
+                        <p>结合中医经络理论与现代按摩手法，疏通经络，调和气血，缓解身体疲劳，提升整体健康。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 养生饮食 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>养生饮食</h3>
+                        <p>根据中医食疗理论，为您定制个性化饮食方案，以内养外，达到美容养颜与健康调理的双重效果。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- 美甲 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                    <div class="service-content">
+                        <h3>美甲服务</h3>
+                        <p>融合传统中式美学元素与现代美甲艺术，为您打造独具特色的指尖艺术，展现东方韵味。</p>
+                        <a href="#" class="service-link">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于焕颜新中式美学</h2>
+                    <p>焕颜新中式美学创立于2020年，致力于将传统中医美容养生智慧与现代科技相结合，打造全新的美容养生体验。</p>
+                    <p>我们的团队由资深中医师、美容专家和营养师组成，秉承"以内养外，身心平衡"的理念，为每一位客户提供个性化、专业化的服务。</p>
+                    <p>在焕颜，我们相信真正的美丽源于健康与平衡，因此我们不仅关注外在美容，更注重内在调理，帮助您实现由内而外的美丽蜕变。</p>
+                    <a href="#contact" class="cta-button">联系我们</a>
+                </div>
+                <div class="about-image" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约区域 -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2>立即预约体验</h2>
+            <p>选择适合您的服务项目，预约专业美容师，开启您的美容养生之旅</p>
+            <a href="#" class="booking-button">在线预约</a>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>焕颜新中式美学</h3>
+                    <p>融合传统中医智慧与现代美容科技，为您带来身心平衡的美丽体验。</p>
+                </div>
+                <div class="footer-column">
+                    <h3>服务项目</h3>
+                    <ul>
+                        <li><a href="#">头疗放松</a></li>
+                        <li><a href="#">头疗焕活</a></li>
+                        <li><a href="#">面部清洁</a></li>
+                        <li><a href="#">面部抗衰老</a></li>
+                        <li><a href="#">养生按摩</a></li>
+                        <li><a href="#">养生饮食</a></li>
+                        <li><a href="#">美甲服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>地址：北京市朝阳区美容养生街88号</li>
+                        <li>电话：400-888-9999</li>
+                        <li>邮箱：info@huanyan.com</li>
+                        <li>营业时间：周一至周日 9:00-21:00</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                        <li><a href="#">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 焕颜新中式美学 版权所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
