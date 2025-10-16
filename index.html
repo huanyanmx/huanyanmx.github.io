@@ -214,21 +214,17 @@
             align-items: center;
         }
         
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-gold) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-            margin-right: 15px;
-            box-shadow: 0 5px 15px rgba(192, 58, 43, 0.2);
-        }
-        
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/11.jpg?raw=true');
+    background-size: cover; /* 或 contain，根据需求调整 */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 隐藏原来的文字 */
+    text-indent: -9999px;
+    overflow: hidden;
+}
         .logo-text {
             display: flex;
             flex-direction: column;
@@ -316,25 +312,26 @@
             box-shadow: 0 8px 25px rgba(192, 58, 43, 0.4);
         }
         
-        /* 英雄区域 */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
-            background-size: cover;
-            background-attachment: fixed;
-            color: white;
-            text-align: center;
-            padding: 200px 0 150px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+/* 英雄区域 */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/2.jpg?raw=true') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 200px 0 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.03' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'%3E%3C/path%3E%3C/svg%3E");
         }
         
@@ -1262,7 +1259,7 @@
             <div class="services-grid">
                 <!-- 头疗放松 -->
                 <div class="service-card" id="service1">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1591343395082-e120087004b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E5%A4%B4%E7%96%97%E6%94%BE%E6%9D%BE.jpg?raw=true');"></div>
                     <div class="service-content">
                         <h3>头疗放松</h3>
                         <p>运用传统中医经络理论，结合现代舒缓技术，精准按摩头部穴位，缓解头部疲劳，促进血液循环，让您感受前所未有的深度放松体验。</p>
@@ -1272,7 +1269,7 @@
                 
                 <!-- 头疗焕活 -->
                 <div class="service-card" id="service2">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E5%A4%B4%E7%96%97%E7%84%95%E6%B4%BB.jpg?raw=true');"></div>
                     <div class="service-content">
                         <h3>头疗焕活</h3>
                         <p>针对现代人常见的头皮问题，采用珍贵中草药配方与现代科技相结合，激活毛囊活力，改善头皮健康，重现秀发生机。</p>
@@ -1282,7 +1279,7 @@
                 
                 <!-- 皮肤管理 -->
                 <div class="service-card" id="service3">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E9%9D%A2%E9%83%A8%E6%B8%85%E6%B4%81.jpg?raw=true');"></div>
                     <div class="service-content">
                         <h3>面部清洁</h3>
                         <p>深层清洁毛孔，温和去除黑头粉刺，结合珍贵中药草本成分，调理肌肤水油平衡，改善问题肌肤，还原肌肤纯净健康状态运用传统中医驻颜秘方与现代抗衰技术，激活胶原蛋白再生，提升肌肤弹性，淡化细纹，延缓肌肤衰老过程。</p>
@@ -1292,7 +1289,7 @@
                 
                 <!-- 美甲美睫 -->
                 <div class="service-card" id="service4">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E7%BE%8E%E7%94%B2%E7%BE%8E%E7%9D%AB.jpg?raw=true');"></div>
                     <div class="service-content">
                         <h3>美甲美睫</h3>
                         <p>精工美甲美睫，定义你的高级感，进口材质，匠心打造眼间指上艺术，精致到毫米的美丽，让你自带光环。</p>
@@ -1302,7 +1299,7 @@
                 
                 <!-- 养生按摩 -->
                 <div class="service-card" id="service5">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E5%85%BB%E7%94%9F%E6%8C%89%E6%91%A9.jpg?raw=true');"></div>
                     <div class="service-content">
                         <h3>养生按摩</h3>
                         <p>结合中医经络理论与现代按摩手法，精准疏通经络，调和气血，缓解身体疲劳，提升整体健康水平。</p>
@@ -1312,7 +1309,7 @@
                 
                 <!-- 养生饮食 -->
                 <div class="service-card" id="service6">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E5%85%BB%E7%94%9F%E7%BE%8E%E9%A3%9F.jpg?raw=true');"></div>
                     <div class="service-content">
                         <h3>养生饮食</h3>
                         <p>根据中医食疗理论，结合现代营养学，为您定制个性化饮食方案，以内养外，达到美容养颜与健康调理的双重效果。</p>
@@ -1350,8 +1347,40 @@
                     
                     <a href="#contact" class="cta-button" style="margin-top: 30px;">联系我们</a>
                 </div>
-                <div class="about-image" style="background-image: url('https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');"></div>
-            </div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <style>
+        .about-image {
+            width: 100%;
+            height: 500px; /* 根据您的需求调整高度 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: imageCycle 6s infinite;
+            border-radius: 10px;
+        }
+
+        @keyframes imageCycle {
+            0%, 45% {
+                background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/产品1.jpg?raw=true');
+            }
+            50%, 95% {
+                background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E4%BA%A7%E5%93%812.jpg?raw=true');
+            }
+            100% {
+                background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/产品1.jpg?raw=true');
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-image cycling-images"></div>
+</body>
+</html>
         </div>
     </section>
 
@@ -1364,7 +1393,7 @@
             </div>
             <div class="team-grid">
                 <div class="team-member" id="team1">
-                    <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="member-photo" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E7%AD%B1%E6%B2%81%E7%BE%8E%E7%94%B2%E5%B8%88.jpg?raw=true');"></div>
                     <div class="member-info">
                         <h3>筱沁美甲师</h3>
                         <span class="position">首席美甲师</span>
@@ -1372,7 +1401,7 @@
                     </div>
                 </div>
                 <div class="team-member" id="team2">
-                    <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1594824436643-90965d553a35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="member-photo" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E7%BD%97%E7%BE%8E%E5%AE%B9%E5%B8%88.jpg?raw=true');"></div>
                     <div class="member-info">
                         <h3>罗美容师</h3>
                         <span class="position">高级美容专家</span>
@@ -1380,7 +1409,7 @@
                     </div>
                 </div>
                 <div class="team-member" id="team3">
-                    <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80');"></div>
+                    <div class="member-photo" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E6%A2%93%E8%90%B1%E5%A4%B4%E9%83%A8%E7%90%86%E7%96%97%E5%B8%88.jpg?raw=true');"></div>
                     <div class="member-info">
                         <h3>籽萱头部理疗师</h3>
                         <span class="position">首席营养顾问</span>
@@ -1388,7 +1417,7 @@
                     </div>
                 </div>
                 <div class="team-member" id="team4">
-                    <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="member-photo" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E5%88%98%E6%8C%89%E6%91%A9%E5%B8%88.jpg?raw=true');"></div>
                     <div class="member-info">
                         <h3>刘按摩师</h3>
                         <span class="position">高级按摩师</span>
@@ -1414,7 +1443,7 @@
                                 在焕颜的体验真的太棒了！籽萱的中医头疗让我彻底放松，整个疗程结束后感觉整个人都轻松了许多。环境优雅，服务专业，强烈推荐！
                             </div>
                             <div class="testimonial-author">
-                                <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+                                <div class="author-avatar" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E6%9D%8E%E5%A5%B3%E5%A3%AB.jpg?raw=true');"></div>
                                 <div class="author-info">
                                     <h4>李女士</h4>
                                     <p>企业高管，32岁</p>
@@ -1428,7 +1457,7 @@
                                 作为长期客户，我已经在焕颜坚持了一年多的养生疗程。罗美容师的饮食建议及产品真的改变了我的生活方式，不仅皮肤变好了，整个人也更加精神了。
                             </div>
                             <div class="testimonial-author">
-                                <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                                <div class="author-avatar" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E4%BE%AF%E5%A5%B3%E5%A3%AB.jpg?raw=true');"></div>
                                 <div class="author-info">
                                     <h4>侯女士</h4>
                                     <p>教师，27岁</p>
@@ -1442,10 +1471,10 @@
                                 刘按摩师的技艺真的太精湛了！每次工作压力大时，来这里做个全身按摩，第二天又能精神饱满地投入工作。这里已经成为我生活中不可或缺的一部分。
                             </div>
                             <div class="testimonial-author">
-                                <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+                                <div class="author-avatar" style="background-image: url('https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E5%BC%A0%E5%85%88%E7%94%9F.jpg?raw=true');"></div>
                                 <div class="author-info">
                                     <h4>张先生</h4>
-                                    <p>工厂老板，38岁</p>
+                                    <p>公司老板，36岁</p>
                                 </div>
                             </div>
                         </div>
@@ -1469,37 +1498,37 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" id="gallery1">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="按摩室">
+                    <img src="https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E4%B8%BB%E9%A1%B5%E8%83%8C%E6%99%AF.jpg?raw=true" alt="按摩室">
                     <div class="gallery-overlay">
                         <h3>专业按摩室</h3>
                     </div>
                 </div>
                 <div class="gallery-item" id="gallery2">
-                    <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="接待区">
+                    <img src="https://github.com/huanyanmx/huanyanmx.github.io/blob/main/1.jpg?raw=true" alt="接待区">
                     <div class="gallery-overlay">
                         <h3>优雅接待区</h3>
                     </div>
                 </div>
                 <div class="gallery-item" id="gallery3">
-                    <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="头疗区">
+                    <img src="https://github.com/huanyanmx/huanyanmx.github.io/blob/main/10.jpg?raw=true" alt="头疗区">
                     <div class="gallery-overlay">
                         <h3>舒适头疗区</h3>
                     </div>
                 </div>
                 <div class="gallery-item" id="gallery4">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="产品展示">
+                    <img src="https://github.com/huanyanmx/huanyanmx.github.io/blob/main/%E4%BA%A7%E5%93%81%E5%B1%95%E7%A4%BA%E5%8C%BA.jpg?raw=true" alt="产品展示">
                     <div class="gallery-overlay">
                         <h3>产品展示区</h3>
                     </div>
                 </div>
                 <div class="gallery-item" id="gallery5">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="面部护理">
+                    <img src="https://github.com/huanyanmx/huanyanmx.github.io/blob/main/2.jpg?raw=true" alt="面部护理">
                     <div class="gallery-overlay">
                         <h3>面部护理室</h3>
                     </div>
                 </div>
                 <div class="gallery-item" id="gallery6">
-                    <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="休息区">
+                    <img src="https://github.com/huanyanmx/huanyanmx.github.io/blob/main/6.jpg?raw=true" alt="休息区">
                     <div class="gallery-overlay">
                         <h3>精致美甲区</h3>
                     </div>
@@ -1529,8 +1558,8 @@
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-weixin"></i></a>
                         <a href="#"><i class="fab fa-weibo"></i></a>
-                        <a href="#"><i class="fab fa-douyin"></i></a>
                         <a href="#"><i class="fab fa-xiaohongshu"></i></a>
+                        <a href="#"><i class="fab fa-douyin"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1564,7 +1593,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 焕颜新中式美学 版权所有</p>
+                <p>&copy; 2023-2025 焕颜新中式美学 版权所有</p>
             </div>
         </div>
     </footer>
